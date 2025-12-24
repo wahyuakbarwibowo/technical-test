@@ -16,8 +16,8 @@ type Event struct {
 
 type Booking struct {
 	gorm.Model
-	Description string
-	Quota       uint
-	StartDate   time.Time
-	EndDate     time.Time
+	IDEvent   uint
+	Quota     uint
+	StartDate time.Time
+	EndDate   time.Time
 }

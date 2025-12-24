@@ -38,3 +38,6 @@ Table bookings {
 
 Ref events: bookings.id_event > events.id 
 ```
+
+## DB Design
+![Image DB Design](/doc/db.png)
