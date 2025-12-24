@@ -16,3 +16,25 @@ TLab Technical Test
     "StartDate": "2025-12-24T03:07:17.297Z",
     "EndDate": "2025-12-25T03:07:17.297Z"
 }'```
+
+
+## DBDiagram.io Source Code
+```
+
+Table events {
+  id integer [primary key]
+  description varchar
+  quota varchar
+  start_date timestamp
+  end_date timestamp
+}
+
+Table bookings {
+  id integer [primary key]
+  id_event varchar
+  total text 
+  created_at timestamp
+}
+
+Ref events: bookings.id_event > events.id 
+```

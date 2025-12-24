@@ -13,3 +13,11 @@ type Event struct {
 	StartDate   time.Time
 	EndDate     time.Time
 }
+
+type Booking struct {
+	gorm.Model
+	Description string
+	Quota       uint
+	StartDate   time.Time
+	EndDate     time.Time
+}
