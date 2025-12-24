@@ -1,4 +1,4 @@
-# api-golang-codebase
+# techinal-test
 TLab Technical Test
 
 ## Sebelum running tambahan env
