@@ -9,26 +9,26 @@ TLab Technical Test
 
 ## CURL Testing
 ### API Create Event
-```curl --location 'localhost:8080/event' \
+`curl --location 'localhost:8080/event' \
 --header 'Content-Type: application/json' \
 --data '{
     "Description": "Acara Satu",
     "Quota": 100,
     "StartDate": "2025-12-24T03:07:17.297Z",
     "EndDate": "2025-12-25T03:07:17.297Z"
-}'```
+}'`
 
 ### API Create Booking
-```curl --location 'localhost:8080/booking' \
+`curl --location 'localhost:8080/booking' \
 --header 'Content-Type: application/json' \
 --data '{
     "IDEvent": 1,
     "Total": 20
-}'```
+}'`
 
 
 ## DBDiagram.io Source Code
-```
+`
 
 Table events {
   id integer [primary key]
@@ -46,7 +46,7 @@ Table bookings {
 }
 
 Ref events: bookings.id_event > events.id 
-```
+`
 
 ## DB Design
 ![Image DB Design](/doc/db.png)
