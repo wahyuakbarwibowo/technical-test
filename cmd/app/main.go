@@ -19,7 +19,7 @@ func main() {
 		log.Fatal(err)
 	}
 	// defer db.Close
-	db.AutoMigrate(&event.Event{})
+	db.AutoMigrate(&event.Event{}, &event.Booking{})
 
 	server := app.NewServer(cfg, db)
 	if err := server.Run(); err != nil {

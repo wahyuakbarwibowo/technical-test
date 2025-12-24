@@ -8,6 +8,7 @@ TLab Technical Test
 `go run cmd/app/main.go`
 
 ## CURL Testing
+### API Create Event
 ```curl --location 'localhost:8080/event' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -15,6 +16,14 @@ TLab Technical Test
     "Quota": 100,
     "StartDate": "2025-12-24T03:07:17.297Z",
     "EndDate": "2025-12-25T03:07:17.297Z"
+}'```
+
+### API Create Booking
+```curl --location 'localhost:8080/booking' \
+--header 'Content-Type: application/json' \
+--data '{
+    "IDEvent": 1,
+    "Total": 20
 }'```
 
 

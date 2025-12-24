@@ -16,8 +16,6 @@ type Event struct {
 
 type Booking struct {
 	gorm.Model
-	IDEvent   uint
-	Quota     uint
-	StartDate time.Time
-	EndDate   time.Time
+	IDEvent uint `gorm:"column:id_event"`
+	Total   uint
 }

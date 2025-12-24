@@ -17,3 +17,7 @@ func NewEventRepository(db *gorm.DB) *EventRepository {
 func (r *EventRepository) CreateEvent(event *event.Event) error {
 	return r.db.Create(event).Error
 }
+
+func (r *EventRepository) CreateBooking(event *event.Booking) error {
+	return r.db.Create(event).Error
+}

@@ -26,3 +26,16 @@ func (h *EventHandler) CreateEvent(c *fiber.Ctx) error {
 	}
 	return c.JSON(fiber.Map{"message": "success to create event"})
 }
+
+func (h *EventHandler) CreateBooking(c *fiber.Ctx) error {
+	e := new(event.Booking)
+
+	if err := c.BodyParser(e); err != nil {
+		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"message": "bad request"})
+	}
+	err := h.eventRepo.CreateBooking(e)
+	if err != nil {
+		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{"message": err.Error()})
+	}
+	return c.JSON(fiber.Map{"message": "success to create booking"})
+}
