@@ -1,0 +1,39 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file (Go 1.18+)
+go.work
+go.work.sum
+
+# Vendor directory (if you don't want to commit it)
+vendor/
+
+# IDE / Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build directories
+/bin/
+/dist/
+/build/
+
+# Logs
+*.log
+.env
